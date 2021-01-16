@@ -54,7 +54,7 @@ def spotify_url_to_search_terms(url):
     	print("Unable to save soup. ")
     search_terms = extract_info(soup)
     print(f'Search terms: {search_terms}')
-    return search_terms
+    return search_terms, title
 
 
 if __name__ == '__main__':
