@@ -1,0 +1,5 @@
+youtube_dl
+requests
+tqdm
+beautifulsoup4
+selenium
