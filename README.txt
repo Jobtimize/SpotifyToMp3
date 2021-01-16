@@ -6,6 +6,9 @@ Finally, it uses these links to download the corresponding MP3 files.
 
 ----
 
+Optionally: Create virtual environment:
+https://docs.python.org/3/library/venv.html
+
 Install requirements.txt:
 pip install -r requirements.txt
 
