@@ -15,11 +15,6 @@ YDL_OPTS = {
     'outtmpl': OUTPUT_DIR + SINGLE_MP3_FILE_NAME
 }
 
-TEST_SPOTIFY_URL = 'https://open.spotify.com/playlist/07zoQjzRszj3ki9A09omiM'
-TEST_SPOTIFY_URL_LIST = ['https://open.spotify.com/playlist/07zoQjzRszj3ki9A09omiM']
-TEST_SEARCH_TERMS = ['Roller Coaster Danny Vera', 'Hotel California - 2013 Remaster Eagles']
-INPUT_FILE = '../input_file.txt'
-
 
 def update_output_path(playlist_title: str):
     new_path = os.path.join(OUTPUT_DIR, playlist_title) + SINGLE_MP3_FILE_NAME

@@ -10,5 +10,6 @@ def check_dir(dir):
         os.mkdir(dir)
         print(f"Directory didn't exist, created at: {dir}")
 
+
 check_dir(SOUPS_DIR)
 check_dir(OUTPUT_DIR)

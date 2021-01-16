@@ -4,7 +4,7 @@ from spotify_url_to_names import spotify_url_to_search_terms
 from names_to_links import single_term_to_yt_link
 from links_to_mp3 import download_single_yt_link
 
-from config import update_output_path, TEST_SPOTIFY_URL_LIST
+from config import update_output_path
 
 SPOTIFY_URL_LIST = sys.argv[1:]
 

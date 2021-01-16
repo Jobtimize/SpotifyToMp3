@@ -1,11 +1,9 @@
-import sys
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from config import BASE_URL, TEST_SEARCH_TERMS
+from config import BASE_URL
 
 
 def create_query(term):
@@ -44,5 +42,4 @@ def search_terms_to_yt_link(search_terms):
 
 
 if __name__ == '__main__':
-    SEARCH_TERMS = sys.argv[1:]
-    search_terms_to_yt_link(SEARCH_TERMS)
+    pass

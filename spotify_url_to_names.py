@@ -1,10 +1,9 @@
 import os
 import requests
-import sys
 
 from bs4 import BeautifulSoup
 
-from config import SOUPS_DIR, TEST_SPOTIFY_URL
+from config import SOUPS_DIR
 from setup import check_dir
 
 
@@ -49,14 +48,13 @@ def spotify_url_to_search_terms(url):
     soup = get_soup(page)
     title = get_title(soup)
     try:
-    	save_soup(soup, title)
-    except:
-    	print("Unable to save soup. ")
+        save_soup(soup, title)
+    except FileNotFoundError:
+        print("Unable to save soup. ")
     search_terms = extract_info(soup)
     print(f'Search terms: {search_terms}')
     return search_terms, title
 
 
 if __name__ == '__main__':
-    URL = sys.argv[1]
-    spotify_url_to_search_terms(URL)
+    pass
