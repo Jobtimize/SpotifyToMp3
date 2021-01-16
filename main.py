@@ -1,8 +1,8 @@
 import sys
 
 from spotify_url_to_names import spotify_url_to_search_terms
-from names_to_links import search_terms_to_yt_link
-from links_to_mp3 import download_yt_links
+from names_to_links import single_term_to_yt_link
+from links_to_mp3 import download_single_yt_link
 
 from config import update_output_path, TEST_SPOTIFY_URL_LIST
 
@@ -15,8 +15,9 @@ def main():
         print(f"Starting with Spotify url: {spotify_url}")
         search_terms, playlist_title = spotify_url_to_search_terms(spotify_url)
         update_output_path(playlist_title)
-        yt_links = search_terms_to_yt_link(search_terms)
-        download_yt_links(yt_links)
+        for term in search_terms:
+            yt_link = single_term_to_yt_link(term)
+            download_single_yt_link(yt_link)
     print("Finished with downloading all. ")
 
 

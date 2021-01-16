@@ -29,11 +29,16 @@ def get_link(url):
     return link
 
 
+def single_term_to_yt_link(term):
+    url = create_query(term)
+    link = get_link(url)
+    return link
+
+
 def search_terms_to_yt_link(search_terms):
     result_links = []
     for term in search_terms:
-        url = create_query(term)
-        link = get_link(url)
+        link = single_term_to_yt_link(term)
         result_links.append(link)
     return result_links
 

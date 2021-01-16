@@ -11,10 +11,14 @@ def load_links():
     return links_list
 
 
+def download_single_yt_link(link):
+    with youtube_dl.YoutubeDL(YDL_OPTS) as ydl:
+        ydl.download([link])
+
+
 def download_yt_links(links_list):
     for link in tqdm(links_list):
-        with youtube_dl.YoutubeDL(YDL_OPTS) as ydl:
-            ydl.download([link])
+        download_single_yt_link(link)
 
 
 def main():
