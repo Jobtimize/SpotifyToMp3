@@ -27,6 +27,10 @@ def get_title(soup):
 
 
 def save_soup(soup, title):
+    if '-' in title:
+        print("'-' found in title, splitting on ' - ' and taking first part. ")
+        title = title.split(' - ')[0]
+        print(f"New title: {title}")
     file_name = os.path.join(SOUPS_DIR, f'{title} soup.txt')
     with open(file_name, 'w') as f:
         f.write(str(soup))
